@@ -1,0 +1,38 @@
+.scroll {
+    overflow-x: hidden;
+}
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+.mat-progress-spinner circle,
+.mat-spinner circle {
+    stroke: #212121;
+}
+
+.mat-progress-spinner circle,
+.mat-spinner circle {
+    stroke: #212121;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: #212121;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #212121;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background-color: #800000;
+}
+
+.mat-form-field-ripple{
+    background-color: #212121;
+}
+
+
+ .mat-focused .mat-form-field-placeholder{
+    color:#212121;
+ }
+ .ngx-pagination li.current{
+     background-color: #212121;
+ }

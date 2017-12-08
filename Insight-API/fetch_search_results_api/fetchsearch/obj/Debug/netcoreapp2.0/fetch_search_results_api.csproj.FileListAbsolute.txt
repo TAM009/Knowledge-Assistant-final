@@ -1,0 +1,10 @@
+C:\Users\Administrator\Desktop\Insight\InSight-API\fetch_search_results_api\fetchsearch\bin\Debug\netcoreapp2.0\fetch_search_results_api.deps.json
+C:\Users\Administrator\Desktop\Insight\InSight-API\fetch_search_results_api\fetchsearch\bin\Debug\netcoreapp2.0\fetch_search_results_api.runtimeconfig.json
+C:\Users\Administrator\Desktop\Insight\InSight-API\fetch_search_results_api\fetchsearch\bin\Debug\netcoreapp2.0\fetch_search_results_api.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\Insight\InSight-API\fetch_search_results_api\fetchsearch\bin\Debug\netcoreapp2.0\fetch_search_results_api.dll
+C:\Users\Administrator\Desktop\Insight\InSight-API\fetch_search_results_api\fetchsearch\bin\Debug\netcoreapp2.0\fetch_search_results_api.pdb
+C:\Users\Administrator\Desktop\Insight\InSight-API\fetch_search_results_api\fetchsearch\obj\Debug\netcoreapp2.0\fetch_search_results_api.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Insight\InSight-API\fetch_search_results_api\fetchsearch\obj\Debug\netcoreapp2.0\fetch_search_results_api.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Insight\InSight-API\fetch_search_results_api\fetchsearch\obj\Debug\netcoreapp2.0\fetch_search_results_api.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Insight\InSight-API\fetch_search_results_api\fetchsearch\obj\Debug\netcoreapp2.0\fetch_search_results_api.dll
+C:\Users\Administrator\Desktop\Insight\InSight-API\fetch_search_results_api\fetchsearch\obj\Debug\netcoreapp2.0\fetch_search_results_api.pdb

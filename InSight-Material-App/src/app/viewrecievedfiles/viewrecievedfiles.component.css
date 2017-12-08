@@ -1,0 +1,29 @@
+.btn-primary {
+    background-color: #6d7fcc ;
+ }
+ 
+ .btn-lg {
+    background-color: #6d7fcc ;
+ }
+ 
+ .glyphicon.glyphicon-star-empty {
+    font-size: 35px;
+ }
+ 
+ .glyphicon.glyphicon-star {
+    font-size: 35px;
+ }
+ 
+ .morecard{
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+ }
+ .view {
+    margin: 15%;
+ }
+ 
+ .container
+ {
+    background-color: yellow;
+ }

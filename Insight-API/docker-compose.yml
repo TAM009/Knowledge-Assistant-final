@@ -1,0 +1,120 @@
+version: "3"
+services:
+
+  javascript:
+    image: angular-app
+    build: ../InSight-Material-App
+    ports:
+      - "80:8080"
+  settings:
+    build: ./API-Settings/SettingsMain
+    network_mode: "host"
+    ports:
+      - "5010:5010"
+    volumes:
+      -  /home/upload:/app/src 
+    depends_on:
+      - db
+
+  editor:
+    build: ./Editor-Api(QuillEditor)/HandleContent/HandleContent
+    network_mode: "host"
+    ports:
+      - "5005:5005"
+    volumes:
+      - /home/upload:/app/src
+    depends_on:
+      - db
+
+  gateway:
+    build: ./API-GATEWAY
+    network_mode: "host"
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+
+  facebook:
+    build: ./API-FACEBOOK
+    network_mode: "host"
+    ports:
+      - "5001:5001"
+    depends_on:
+      - db
+
+  google:
+    build: ./API-Google
+    network_mode: "host"
+    ports:
+      - "5002:5002"
+    depends_on:
+      - db
+
+  token:
+    build: ./API-Token
+    network_mode: "host"
+    ports:
+      - "5003:5003"
+    depends_on:
+      - db
+
+  search:
+    build: ./search-insight-api/searchservice
+    network_mode: "host"
+    ports:
+      - "5008:5008"
+    volumes:
+      - /home/neo4j/import:/app/src
+    depends_on:
+      - db
+      - neo4j-db
+
+  
+  fetch:
+    build: ./fetch_search_results_api/fetchsearch
+    network_mode: "host"
+    ports:
+      - "5009:5009"
+    depends_on:
+      - db
+      - neo4j-db
+
+  authentication:
+    build: ./API-Authentication
+    network_mode: "host"
+    ports:
+      - "5004:5004"
+    depends_on:
+      - db
+
+  share:
+    build: ./sharewithapi
+    network_mode: "host"
+    ports:
+      - "5007:5007"
+    depends_on:
+      - db  
+
+  db:
+    image: "microsoft/mssql-server-linux:2017-latest"
+    environment:
+      SA_PASSWORD: "Test1234!"
+      ACCEPT_EULA: "Y"
+      network_mode: "host"
+
+  neo4j-db:
+    image:  "neo4j:latest"
+    environment:
+      NEO4J_AUTH: "neo4j/Neo4j"
+      network_mode: "host"
+    restart: "always"
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - /home/neo4j/data:/data
+      - /home/neo4j/logs:/logs
+      - /home/neo4j/plugins:/plugins
+      - /home/neo4j/import:/var/lib/neo4j/import
+      - /home/neo4j/conf/:/var/lib/neo4j/conf/
+      

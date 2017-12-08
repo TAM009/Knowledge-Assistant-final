@@ -1,0 +1,68 @@
+<mat-card class="example-card">
+    <a href="https://s3.ap-south-1.amazonaws.com/testinsight95/{{photoUrl}}" class="profile-pic">
+        <div class="profile-pic" id="fileUpload" [style.backgroundImage]=" 'url(https://s3.ap-south-1.amazonaws.com/testinsight95/' + photoUrl +' )' ">
+        </div>
+    </a>
+    <form enctype="multipart/form-data" method="post" name="fileinfo">
+        <div class="fileUpload">
+            <button id="uploadbox" *ngIf="uploadBox" mat-raised-button md-mini-fab type="button" (click)=" fileToUpload.click();showMore();" >
+                <label for="fileToUpload">Change Photo</label>
+            </button>
+            <input #fileToUpload id="fileToUpload" type="file" style="display:none;">
+                <div id="d3" *ngIf="d3Display">
+                    <button mat-raised-button id="save-button" (click)="upload(fileToUpload.files);showLess();refresh();" > Save </button>
+                </div>  
+                    <span class="example-spacer"></span> 
+            </div>
+    </form>
+        
+        <h2>{{first}}</h2>
+        <button mat-button class="pswd" (click)="openDialog()" id="changepassword">Change Password <i class="material-icons">mode_edit</i></button>
+        
+
+        <mat-card-content id="content">
+            <form name = "details" class="formfields">
+    
+             <mat-form-field >
+                <label for='name'></label>
+                <input #nameBox='ngModel' (blur)="updateuser(nameBox.value)"  id='name' class = "form-control" matInput placeholder="User Name" name= "name"
+                 [(ngModel)]="user" />
+             </mat-form-field>
+        
+            <mat-form-field >
+                <input disabled #emailBox matInput placeholder="Email" value="{{email}}" >
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+        
+            <mat-form-field >
+                <label for='contact'></label>
+                <input #contactBox='ngModel' (blur)="updatecontact(contactBox.value)" id='contact' class="form-control" matInput placeholder="Contact Number" name="contact" [(ngModel)]="contactNo" >
+                <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+        
+            <mat-form-field>
+                    <input #dobBox='ngModel'  (blur)="updatedob(dobBox.value)"   id='dob' class="form-control" matInput [matDatepicker]="picker" (dateInput)="updatedob(dobBox.value)" (dateChange)="updatedob(dobBox.value)" placeholder="Date of Birth" name="dob" [(ngModel)]="dob">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker  (blur)="updatedob(dobBox.value)" ></mat-datepicker>
+                    <mat-hint> DD/MM/YYYY </mat-hint>  
+                  
+            </mat-form-field>
+
+            </form>
+        </mat-card-content>
+    </mat-card>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

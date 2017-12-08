@@ -1,0 +1,90 @@
+.example-spacer {
+    flex: 1 1 auto;
+ }
+ 
+ .example-container {
+    margin-top: 60px;
+ }
+ 
+ .example-sidenav-content {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 10px;
+ }
+ 
+ .Product-name {
+    padding-left: 10px;
+    padding-top: 5px;
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
+ }
+ .image{
+    border-radius: 50%;
+ }
+ 
+ li {
+    list-style: none;
+ }
+ 
+ #userdp {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    
+   
+ }
+ 
+ .mat-button,
+ .mat-fab,
+ .mat-icon-button,
+ .mat-mini-fab,
+ .mat-raised-button {
+    margin-left: 40 px;
+ }
+ 
+ #sidenav {
+    text-decoration: none;
+    list-style-type: none;
+ }
+ 
+ 
+ 
+ 
+ #one{
+    font-size: 15px;
+   margin-right: 10px;
+ }
+ #logout{
+    color: white;
+ }
+ #header{
+    background-color:#800000;
+    position:fixed;
+    color:white;
+    z-index: 1;
+ }
+ #sidenavmenu{
+    background-color:#800000;
+    color:white;
+ }
+ 
+ .mat-drawer{
+    width:17%;
+ }
+ @media (min-width:300px) and (max-width:768px) {
+    .mat-drawer{
+        width:50%;
+    }
+    .desktop_view{
+        display:none;
+    }
+    
+    
+ 
+ }
+ @media (min-width: 769px) and (max-width:2500px){
+    .mobile_view{
+        display: none;
+        
+    }
+}  

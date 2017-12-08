@@ -1,0 +1,126 @@
+
+ /* body {
+	background: #fff;
+	color: #666;
+	font: 90%/180% Arial, Helvetica, sans-serif;
+	width: 500px;
+	max-width: 96%;
+  margin: 0 auto;
+  
+ 
+}
+a {
+	color: #69C;
+	text-decoration: none;
+}
+a:hover {
+	color: #F60;
+}
+h1 {
+	font: 1.7em;
+	line-height: 110%;
+	color: #000;
+}
+p {
+	margin: 0 0 20px;
+}
+
+
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+
+input[type=search] {
+	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+    border: solid 1px #ccc;
+    margin-top: 5px;
+	padding: 9px 10px 9px 32px;
+  width: 900px;
+ 
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+@media(min-width:320px) and (max-width:425px){
+  input[type=search]{
+    width: 100px;
+  }
+}
+@media(min-width:426px) and (max-width:768px){
+  input[type=search]{
+    width: 400px;
+  }
+}
+@media(min-width:768px) and (max-width:1024px){
+  input[type=search]{
+    width: 450px;
+  }
+}
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}*/
+.searchbar{
+  width:500px;
+  margin:50px auto;
+ }
+ .place {
+  padding:8px 15px;
+  width: 700px;
+  border:0px solid #dbdbdb ;
+  font-family: "FontAwesome";
+  margin-left:-17%;
+ }
+ input[type='text']{
+  text-align:right;
+  }
+  
+  input[type='text']:focus{
+  text-align:left;
+  }
+ .searchbtn {
+  position:relative;
+  padding:6px 15px;
+  left:-8px;
+  border:2px solid #212121 ;
+  background-color:#212121 ;
+  color:#fafafa ;
+ }
+ .searchbtn:hover  {
+  background-color:#fafafa ;
+  color:#212121 ;
+ }
+ @media (max-width:320px){
+  .place{width: 220px;
+  margin-left: 1%;
+ }}
+ @media (min-width:321px) and (max-width:360px){
+  .place{width: 250px;
+  margin-left: 1%;
+ }}
+ @media (min-width:361px) and (max-width:375px){
+  .place{width: 275px;
+  margin-left: 1%;
+ }}
+ @media (min-width:376px) and (max-width:384px){
+  .place{width: 284px;
+  margin-left: 1%;
+ }}
+

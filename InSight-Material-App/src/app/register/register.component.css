@@ -1,0 +1,13 @@
+.mat-form-field {
+    width: 85%;
+}
+
+ .mat-input-underline {
+    background-color: #212121;    /* replace this color with your accent color hex code */
+}
+
+@media (min-width:800px) and (max-width:2400px) {
+    .mat-form-field {
+        width: 75%;
+    }
+}

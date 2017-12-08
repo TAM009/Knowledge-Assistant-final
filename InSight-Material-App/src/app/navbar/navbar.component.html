@@ -1,0 +1,142 @@
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+    </head>
+    <body>
+        <mat-sidenav-container fullscreen>
+            <mat-sidenav #sidenav mode="over" class="leftsidenavBox">
+                 <mat-toolbar id="sidenavmenu">Menu</mat-toolbar>
+                     <div class="leftsidenav">
+                          <div class="sidenavcontents">
+                            <li>
+                                <a [routerLink]="['/dashboard/edit']" _ngcontent-c1="" aria-label="Home" class=" docs-navbar docs-button mat-button" mat-button="" tabindex="0" aria-disabled="false" (click)="sidenav.close()">
+                                <span class="mat-button-wrapper">
+                                <mat-icon>file_upload</mat-icon>
+                                <span>Upload</span>
+                                </span>
+                                <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                                <div class="mat-button-focus-overlay"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/dashboard/pre']" _ngcontent-c1="" aria-label="Reports" class="docs-navbar-hide-small docs-button mat-button" mat-button="" tabindex="0" aria-disabled="false" (click)="sidenav.close()">
+                                <span class="mat-button-wrapper">
+                                <mat-icon>library_books</mat-icon>
+                                <span>My Repository</span>
+                                </span>
+                                <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                                <div class="mat-button-focus-overlay"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/dashboard/favourites']" _ngcontent-c1="" aria-label="Reports" class="docs-navbar-hide-small docs-button mat-button" mat-button="" tabindex="0" aria-disabled="false" (click)="sidenav.close()">
+                                <span class="mat-button-wrapper">
+                        <mat-icon>star</mat-icon>
+                        <span>Favourites</span>
+                                </span>
+                                <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                                <div class="mat-button-focus-overlay"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/dashboard/receivedfiles']" _ngcontent-c1="" aria-label="Reports" class="docs-navbar-hide-small docs-button mat-button" mat-button="" tabindex="0" aria-disabled="false" (click)="sidenav.close()">
+                                <span class="mat-button-wrapper">
+                                <mat-icon>file_download</mat-icon>
+                                <span>Received Files</span>
+                                </span>
+                                <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                                <div class="mat-button-focus-overlay"></div>
+                            </a>
+                        </li>
+
+                        <li>
+                                <a [routerLink]="['/dashboard/settings']" _ngcontent-c1="" aria-label="Reports" class="docs-navbar-hide-small docs-button mat-button" mat-button="" tabindex="0" aria-disabled="false" (click)="sidenav.close()">
+                                    <span class="mat-button-wrapper">
+                                    <mat-icon>settings</mat-icon>
+                                    <span>Settings</span>
+                                    </span>
+                                    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                                    <div class="mat-button-focus-overlay"></div>
+                                </a>
+                            </li>
+                    </div>
+                </div>
+           
+        </mat-sidenav>
+       
+            <mat-toolbar *ngIf="true" id="header">
+                <span matTooltip="Menu">
+                     <button mat-icon-button type="button" mat-button (click)="sidenav.open()">
+                    <mat-icon>menu</mat-icon>
+                    </button>
+                </span>
+                <span class="Product-name">Insight</span>
+                
+                <span class="example-spacer"></span>
+                <app-searchbar></app-searchbar>
+                <span class="example-spacer"></span>
+              
+                <img class="image" id="userdp" [src]="photoUri" alt="">
+                
+                <span matTooltip="Profile">
+                    <div *ngIf="currentUser">
+                    <div id="one">Welcome {{currentUser.firstName}} !</div>
+                    </div>
+               </span>
+               <span matTooltip="Profile">
+                <div *ngIf="user">
+                <div id="one">Welcome {{user.firstName}} !</div>
+                </div>
+           </span>
+                
+            <span matTooltip="Profile">
+                <div *ngIf="googleuser">
+                    <div id="one">Welcome {{ googleuser.name }} !</div>
+                </div>
+            </span>
+            <span matTooltip="Logout">
+                <div *ngIf="currentUser">
+                    <button mat-icon-button type="button" mat-button  (click)="signOut()" id="logout"><i class="material-icons">power_settings_new</i></button>
+                </div>
+            </span>
+            <span matTooltip="Logout">
+                <div *ngIf="user">
+                    <button mat-icon-button type="button" mat-button (click)="signOutfacebook()" id="logout"><i class="material-icons">power_settings_new</i></button>
+                </div>
+            </span>
+            <span matTooltip="Logout">
+                <div *ngIf="googleuser">
+                    <button mat-icon-button type="button" mat-button (click)="signOutgoogle()" id="logout"><i class="material-icons">power_settings_new</i></button>
+                </div>
+            </span>
+            
+        </mat-toolbar> 
+             
+        <!-- Mobile View -->
+             <div class="mobile_view">
+                    <mat-toolbar id="header">
+                            <span matTooltip="Menu">
+                                    <button mat-icon-button type="button" mat-button (click)="sidenav.open()">
+                                    <mat-icon>menu</mat-icon>
+                                    </button>
+                                </span>
+                                <span class="Product-name">Insight</span>
+                                <span class="example-spacer"></span>
+                                <span matTooltip="Search"><button mat-icon-button type="button" mat-button [routerLink]="['/search']"><i class="material-icons">search</i></button></span>
+                                <span matTooltip="More"><button mat-icon-button type="button" mat-button [matMenuTriggerFor]="menu">
+                                        <mat-icon>more_vert</mat-icon>
+                                 </button></span>
+                                      <mat-menu #menu="matMenu">
+                                        <button mat-menu-item>
+                                          <mat-icon>dialpad</mat-icon>
+                                          <span>Profile</span>
+                                        </button>
+                                        <button mat-menu-item>
+                                            <mat-icon>power_settings_new</mat-icon>
+                                            <span>Logout</span>
+                                        </button>  
+                                      </mat-menu>
+                    </mat-toolbar>
+             </div>  
+        <router-outlet></router-outlet>
+        </mat-sidenav-container>
+    </body>

@@ -1,0 +1,61 @@
+<div *ngIf="load" class="loading-indicator">
+	<mat-spinner mat-diameter="1px"></mat-spinner>
+</div>
+<!-- Component to show all the contents that have been uploaded by the User -->
+<div class="container">
+	<div *ngIf="content3">
+		<div id="nocontent" *ngIf="content3.length===0">
+			<mat-card id="nocontentcard">
+			<mat-card-content>
+			<h2>No Contents to Show</h2>
+			<h2>Upload to View</h2>
+			<button id="uploadbtn" mat-raised-button [routerLink]="['/dashboard/edit']">Upload</button>
+			</mat-card-content>
+			</mat-card>
+		</div>
+		<div *ngIf="!(content3.length===0)">
+    <!-- Card to show the collection of all the Contents -->
+    <div class="masonry">
+        <ul *ngFor="let con of content3 | paginate: { itemsPerPage: 9, currentPage: p }">
+            <div class="item">
+                <mat-card #card class="container" id="filecards">
+                    <mat-card-header>
+                            <span id="privateicon" *ngIf="con.isPrivate"><span matTooltip="Private"><i id="lock" class="material-icons">lock</i></span></span>
+                            <span id="publicicon" *ngIf="!con.isPrivate"><span matTooltip="Public"><i id="lockopen" class="material-icons">lock_open</i></span></span>
+                        <mat-card-title id="metatags">
+                            {{con.metaTags}} 
+                            
+                        </mat-card-title>
+                        
+                    </mat-card-header>
+                    <a href="" routerLink="/dashboard/view" (click)="view(con)" id="contentdisplay">
+                        <mat-card-content [innerHTML]="addDots(con)">
+                        </mat-card-content>
+                    </a>
+                    
+                    <mat-card-actions id="actions">
+                        <span id="date">Created on: {{ con.createdOn | date:'dd/MM/yy'}}</span>
+                        <!-- Button that takes you to the desired component to edit the conten further -->
+                        <span matTooltip="Edit"><button mat-button id="editbtn" (click)="edit(con)" routerLink='/dashboard/ed'><mat-icon id="editicon">edit</mat-icon></button></span>
+                        <!-- Button that opens the Dialog button for the confirmation of the Delete operation -->
+                        <span matTooltip="Delete"><button mat-button id="deletebtn" (click)="openDialog()" (click)="preDelete(con)"><mat-icon id="deleteicon">delete</mat-icon></button></span>
+                        <!-- Button that shows that the content is not added to the Favourites and lets add the contents to the Favourites by opening the corresponding dialog box -->
+                        <span matTooltip="Favourite"><button mat-button id="favbtn" *ngIf="con.isFavourites === true" (click)="openDialogRemoveFav()" (click)="change1(con)"><mat-icon id="favicon">favorite</mat-icon></button></span>
+                        <!-- Button that shows that the content is added to the Favourites and lets remove the contents from the Favourites by opening the corresponding dialog box -->
+                        <span matTooltip="Favourite"><button mat-button id="favborderbtn"*ngIf="con.isFavourites === false" (click)="openDialogAddFav()" (click)="change(con)"><i class="material-icons" id="favicon">favorite_border</i></button></span>
+
+                        <span matTooltip="Share"><button mat-button (click)="fetchIDs(con)" (click)="openDialogshare()" id="sharebtn"><mat-icon id="shareicon">share</mat-icon></button></span>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+
+        </ul>
+    </div>
+
+
+<div class="pagination">
+    <pagination-controls (pageChange)="p = $event" style="background: #212121"></pagination-controls>
+</div>
+</div>
+</div>
+</div>

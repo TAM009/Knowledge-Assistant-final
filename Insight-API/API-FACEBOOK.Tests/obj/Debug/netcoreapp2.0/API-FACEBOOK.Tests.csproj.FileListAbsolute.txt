@@ -1,0 +1,15 @@
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netstandard15.dll
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netstandard15.dll
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\bin\Debug\netcoreapp2.0\API-FACEBOOK.Tests.deps.json
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\bin\Debug\netcoreapp2.0\API-FACEBOOK.Tests.runtimeconfig.json
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\bin\Debug\netcoreapp2.0\API-FACEBOOK.Tests.runtimeconfig.dev.json
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\bin\Debug\netcoreapp2.0\API-FACEBOOK.Tests.dll
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\bin\Debug\netcoreapp2.0\API-FACEBOOK.Tests.pdb
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\bin\Debug\netcoreapp2.0\API-FACEBOOK.dll
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\bin\Debug\netcoreapp2.0\API-FACEBOOK.pdb
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\obj\Debug\netcoreapp2.0\API-FACEBOOK.Tests.csproj.CoreCompileInputs.cache
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\obj\Debug\netcoreapp2.0\API-FACEBOOK.Tests.AssemblyInfoInputs.cache
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\obj\Debug\netcoreapp2.0\API-FACEBOOK.Tests.AssemblyInfo.cs
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\obj\Debug\netcoreapp2.0\API-FACEBOOK.Tests.dll
+c:\Users\Administrator\Desktop\Insight\InSight-API\API-FACEBOOK.Tests\obj\Debug\netcoreapp2.0\API-FACEBOOK.Tests.pdb

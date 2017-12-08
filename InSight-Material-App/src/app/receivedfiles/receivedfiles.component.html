@@ -1,0 +1,40 @@
+
+
+
+<div class="container">
+   <div *ngIf="array?.length > 0">
+    <div class="masonry">
+        
+        <ul *ngFor="let con of array | paginate: { itemsPerPage: 10, currentPage: p }">
+            <div class="item">
+                <mat-card #card class="container" id="receivedfilescards">
+                    <mat-card-header>
+                        <mat-card-title id="metatags">
+                                {{con['result'].metaTags}}
+                        </mat-card-title>
+                    </mat-card-header>
+                    <!-- <a href="" routerLink="/dashboard/view" (click)="view(con)" id="contentdisplay"> -->
+                     <a href="" (click)="view(con['result'].content)" [routerLink]="['/dashboard/viewrecieved']" id="contentdisplay"><mat-card-content [innerHTML]="addDots(con['result'].content)"> 
+                        </mat-card-content> 
+                     </a>
+                    <mat-card-actions id="actions">
+                    <span id="date">Created on: {{ con['result'].createdOn | date:'dd/MM/yy'}}</span>
+                    <span id="sharedby"> Shared by: {{ getsharedbyusername(con['result'].userID) }} </span>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </ul>
+    </div>
+   
+
+<div class="pagination"><pagination-controls (pageChange)="p = $event"></pagination-controls></div>
+</div>
+</div>
+
+<div id="norf" *ngIf="!(array?.length > 0)">
+	<mat-card id="norfcard">
+	<mat-card-content>
+		<h2>No Received files to show.</h2>
+	</mat-card-content>
+	</mat-card>
+</div>
